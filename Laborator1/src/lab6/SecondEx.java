@@ -1,37 +1,5 @@
 package lab6;
 
-abstract class ACalculator<T>
-{
-    protected T state;
-
-    public T result() { return state; }
-    public void clear() { state = null; }
-    public abstract void init(T initialstate);
-}
-
-class NewIntCalculator extends ACalculator<Integer>
-{
-    public NewIntCalculator(Integer initialstate) { init(initialstate); }
-
-    @Override
-    public void init(Integer initialstate) { this.state = initialstate; }
-
-    public NewIntCalculator add(Integer value) { this.state += value; return this; }
-    public NewIntCalculator sub(Integer value) { this.state -= value; return this; }
-    public NewIntCalculator mul(Integer value) { this.state *= value; return this; }
-}
-
-class DoubleCalculator extends ACalculator<Double>
-{
-    public DoubleCalculator(Double initialstate) { init(initialstate); }
-
-    @Override
-    public void init(Double initialstate) { this.state = initialstate; }
-
-    public DoubleCalculator add(Double value) { this.state += value; return this; }
-    public DoubleCalculator sub(Double value) { this.state -= value; return this; }
-    public DoubleCalculator mul(Double value) { this.state *= value; return this; }
-}
 
 public class SecondEx
 {
